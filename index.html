@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUICAR - Buy Your Car 100% Online</title>
+    <style>
+        /* Inline CSS for immediate testing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        :root {
+            --primary-orange: #ff9500;
+            --secondary-orange: #ff5722;
+            --success-green: #4fd1c5;
+        }
+
+        .splash-screen {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, #8b5a00 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .splash-content {
+            text-align: center;
+            max-width: 320px;
+            padding: 32px;
+        }
+
+        .logo {
+            width: 128px;
+            height: 128px;
+            background-color: black;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+        }
+
+        .logo-circle {
+            width: 64px;
+            height: 64px;
+            background-color: var(--secondary-orange);
+            border-radius: 50%;
+        }
+
+        .splash-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .splash-subtitle {
+            font-size: 24px;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 64px;
+        }
+
+        .progress-fill {
+            width: 75%;
+            height: 100%;
+            background-color: white;
+            border-radius: 2px;
+            animation: progress 2s ease-in-out;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 75%; }
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            min-height: 48px;
+        }
+
+        .btn-white {
+            background-color: white;
+            color: var(--primary-orange);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .btn-white:hover {
+            background-color: #f9f9f9;
+            transform: translateY(-1px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Home page styles */
+        .home-page {
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: var(--primary-orange);
+            color: white;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header .logo {
+            width: 32px;
+            height: 32px;
+            margin: 0;
+        }
+
+        .header .logo-circle {
+            width: 16px;
+            height: 16px;
+        }
+
+        .app-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .home-content {
+            padding: 16px;
+        }
+
+        .home-header {
+            margin-bottom: 32px;
+        }
+
+        .home-header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .car-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary-orange), var(--secondary-orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .car-info {
+            padding: 16px;
+        }
+
+        .car-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .car-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .car-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--secondary-orange);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Splash Screen -->
+        <div id="splash" class="splash-screen">
+            <div class="splash-content">
+                <div class="logo">
+                    <div class="logo-circle"></div>
+                </div>
+                <h1 class="splash-title">Buy Your Car 100% Online</h1>
+                <p class="splash-subtitle">Thenga Imoto Yakho Ku-inthanethi</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <button class="btn btn-white" onclick="showHome()">
+                    Get Started
+                </button>
+            </div>
+        </div>
+
+        <!-- Home Page -->
+        <div id="home" class="home-page hidden">
+            <header class="header">
+                <div class="header-logo">
+                    <div class="logo">
+                        <div class="logo-circle"></div>
+                    </div>
+                    <span class="app-name">QUICAR</span>
+                </div>
+                <div class="avatar">SA</div>
+            </header>
+
+            <main class="home-content">
+                <div class="home-header">
+                    <h1>Find Your Perfect Car</h1>
+                    <p>with AI-Powered Search</p>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">2022 Toyota Corolla</div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-title">2022 Toyota Corolla</h3>
+                            <span class="car-price">R289,000</span>
+                        </div>
+                        <p>📍 Durban • ⭐ 4.8 • Est. R5,200/month</p>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">2021 VW Polo</div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-title">2021 Volkswagen Polo</h3>
+                            <span class="car-price">R245,000</span>
+                        </div>
+                        <p>📍 Johannesburg • ⭐ 4.5 • Est. R4,400/month</p>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">2020 Hyundai i20</div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-title">2020 Hyundai i20</h3>
+                            <span class="car-price">R199,000</span>
+                        </div>
+                        <p>📍 Cape Town • ⭐ 4.6 • Est. R3,600/month</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript to test functionality
+        console.log('QUICAR app loaded successfully!');
+        
+        function showHome() {
+            document.getElementById('splash').classList.add('hidden');
+            document.getElementById('home').classList.remove('hidden');
+        }
+
+        // Auto-redirect after 3 seconds
+        setTimeout(() => {
+            showHome();
+        }, 3000);
+    </script>
+</body>
+</html>

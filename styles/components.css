@@ -1,0 +1,304 @@
+/* Car Card */
+.car-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.car-image-container {
+  position: relative;
+}
+
+.car-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.favorite-button:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+.best-match-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: var(--secondary-orange);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.car-info {
+  padding: 16px;
+}
+
+.car-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.car-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.car-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--secondary-orange);
+}
+
+.car-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.car-rating {
+  color: #ffa500;
+}
+
+.car-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-location {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid var(--border);
+  padding: 8px;
+  z-index: 100;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+  font-size: 24px;
+}
+
+.nav-item.active {
+  color: var(--secondary-orange);
+}
+
+.nav-item span:last-child {
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Tabs */
+.tabs {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.tab-buttons {
+  display: flex;
+  background: #f8f9fa;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: all 0.2s ease;
+}
+
+.tab-button.active {
+  background: white;
+  color: var(--secondary-orange);
+  border-bottom: 2px solid var(--secondary-orange);
+}
+
+.tab-content {
+  padding: 16px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Features List */
+.features-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.check-icon {
+  color: var(--success-green);
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* Dealer Info */
+.dealer-info {
+  margin-top: 24px;
+}
+
+.dealer-card {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  gap: 12px;
+}
+
+.dealer-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-orange);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.dealer-details {
+  flex: 1;
+}
+
+.dealer-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.dealer-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.verified {
+  color: var(--success-green);
+  font-size: 12px;
+}
+
+/* Finance Controls */
+.payment-estimate {
+  background: rgba(255, 149, 0, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.monthly-amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--secondary-orange);
+  margin: 8px 0;
+}
+
+.terms-note {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.finance-controls {
+  space-y: 16px;
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.apply-financing {
+  width: 100%;
+  margin-top: 16px;
+}
