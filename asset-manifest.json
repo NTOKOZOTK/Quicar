@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/quicar/static/css/main.08c2ecbd.css",
+    "main.js": "/quicar/static/js/main.fd595dc0.js",
+    "static/js/453.5cc540fc.chunk.js": "/quicar/static/js/453.5cc540fc.chunk.js",
+    "index.html": "/quicar/index.html",
+    "main.08c2ecbd.css.map": "/quicar/static/css/main.08c2ecbd.css.map",
+    "main.fd595dc0.js.map": "/quicar/static/js/main.fd595dc0.js.map",
+    "453.5cc540fc.chunk.js.map": "/quicar/static/js/453.5cc540fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08c2ecbd.css",
+    "static/js/main.fd595dc0.js"
+  ]
+}
