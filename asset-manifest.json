@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Quicar/static/css/main.08c2ecbd.css",
-    "main.js": "/Quicar/static/js/main.7c5a8f99.js",
+    "main.js": "/Quicar/static/js/main.e37f57eb.js",
     "static/js/453.5cc540fc.chunk.js": "/Quicar/static/js/453.5cc540fc.chunk.js",
     "index.html": "/Quicar/index.html",
     "main.08c2ecbd.css.map": "/Quicar/static/css/main.08c2ecbd.css.map",
-    "main.7c5a8f99.js.map": "/Quicar/static/js/main.7c5a8f99.js.map",
+    "main.e37f57eb.js.map": "/Quicar/static/js/main.e37f57eb.js.map",
     "453.5cc540fc.chunk.js.map": "/Quicar/static/js/453.5cc540fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08c2ecbd.css",
-    "static/js/main.7c5a8f99.js"
+    "static/js/main.e37f57eb.js"
   ]
 }
